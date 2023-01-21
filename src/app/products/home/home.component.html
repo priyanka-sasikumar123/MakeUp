@@ -1,0 +1,144 @@
+<!-- Section: Design Block -->
+<section class="py-5" style="width: 100%; margin-top: 30px; font-family: 'Titillium Web', sans-serif;">
+    <!-- Jumbotron -->
+    <div class="maindiv px-4 py-4 px-md-5 text-center text-lg-start" >
+      <div class="container">
+        <div class="row gx-lg-5 align-items-center">
+          <!-- <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="my-5 display-3 fw-bold ls-tight">
+              The best offer <br />
+              <span class="text-primary">for your business</span>
+            </h1>
+            <p style="color: hsl(217, 10%, 50.8%)">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+              quibusdam tempora at cupiditate quis eum maiores libero
+              veritatis? Dicta facilis sint aliquid ipsum atque?
+            </p>
+          </div> -->
+  
+          <div class="col-lg-6 mb-5 mb-lg-0 ">
+            <div class="card py-5" style="background-color:whitesmoke">
+              <div class="card-body py-5 px-md-5">
+                <form [formGroup]="registerform">
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" formControlName="fname" placeholder="First Name" id="fname" class="form-control" />
+                        
+                      </div>
+                      <div *ngIf="this.registerform.get('fname')?.errors && this.registerform.get('fname')?.touched" style="color:red;">
+                        Invalid 
+                    </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" formControlName="lname" placeholder="Last Name" id="lname" class="form-control" /> 
+                      </div>
+                      <div *ngIf="this.registerform.get('lname')?.errors && this.registerform.get('lname')?.touched" style="color:red;">
+                        Invalid 
+                    </div>
+                    </div>
+                  </div>
+  
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <input type="email" formControlName="email" placeholder="Email Address" id="email" class="form-control" />      
+                  </div>
+                  <div *ngIf="this.registerform.get('email')?.errors && this.registerform.get('email')?.touched" style="color:red;">
+                    Invalid email
+                </div>
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <input type="password" formControlName="pswd" placeholder="Password" id="pswd" class="form-control" /> 
+                  </div>
+                  <div *ngIf="this.registerform.get('pswd')?.errors && this.registerform.get('pswd')?.touched" style="color:red;">
+                    Invalid password
+                  </div>
+  
+                  <!-- Submit button -->
+                  <div class="text-center">
+                    <button (click)="register()" type="button" class="btn btn-warning btn-block mb-4">
+                        Sign Up
+                      </button>   
+                  </div>
+                  <div class="text-center">
+                    If You Have An Account <a routerLink="login" class="btn btn-success ">
+                        Sign In
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+
+  <!-- Gallery -->
+  <section class="gallery">
+  <div class="container">
+    <div class="row">
+      <!-- first column -->
+      <div class="col-md-3">
+        <div class="gallery-box">
+          <img src="https://media.glamour.com/photos/5cc9bd1080911dec300bc131/master/pass/0501_nomakeup_river.jpg" alt="">
+          <h4></h4>
+        </div>
+      </div>
+        <!-- second column -->
+        <div class="col-md-3">
+          <div class="gallery-box">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PBhAQDxAPDxAQFg4SDg4PDQ8NDQ8QFREWFhURFRMYHDQgGBomGxUTITEhJjUrLjouFx81OjYsNygwLisBCgoKDQ0OFQ8NFSsdFRkrLSsrLS0rKysrKystLTcrKystKysrKysrKzctLS0tKysrKysrKystKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAwEBAQEBAAAAAAAAAAAABQYIBwMEAgH/xABEEAEAAQMBBAIMDQEIAwAAAAAAAQIDBBEGBxIhBTETIjM2QVFhcYGRscEUIyYyUnN0kqGjsrPC0RY0QlOCotLhFWJj/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwDuIAAAAAAAAAAPm6Qz7OPi1Xb9yi1bpiZqruVRTTEeeQfSOVdO778K1XNOJYu5UxxfGVTGPZ11mI017aY5RPVHKVWzN+WfVMxaxsW11acU3L0xz5+GOtcHfhnCd8vTPZNeLGiOvh+DcvN87VJYW/LOp07NjYt3r1mmblmZ8XhnQwd9HL+gt9eBeu00ZVq7iVVcMcfK9YiZ5c5jtojy6OlYmVbvY1Ny1XTct1xrRXRVFVFUeOJhB7AAAAAAAAAAAAAAAAAAAAAAhdrdpLHRnQ1eTenXTlbtxMRXduT1U06+ufJEszbX7ZZnSuXxZFeluJmbWPRys2eURy8Mzy65dk399A3MnZuzkWomqrFudvTHP4q5EUzVp5KuD0auI2OgLs5HDMTE6fjyn2S1IIeoj5y3X9mKowqKojXWmmqJ069ZmJ9kPm/s7XGRMcPgmr/bOnsXEVyInn6X8nXRd8bZmeGuNNNaadOXjjT3vHO2YmMWKo8MUTHLyc/eYKdq6VuW2urxOnPgt2qqca/yinXWLd3lpXEeCNImJ08au2dmqqrvBTGs8MT6OUf1Tu7XZGuvbKx2WmeC1XF2rxfF6106/wCqKEsVo8BkAAAAAAAAAAAAAAAAAAAAeWXj0XcWu1ciKqLlNVFdM9U01RpMOdZGzVNORbmY7aJimudOuadY1/DR0pGdJWPjNfHpPqalFHnomPgtmnTlRNUa6eWZj3Pxb6Lia6atI5RTry69aav6LPcs/Fx5Jj2vC1Z0p9FPvXTED/46JuVRp/hjn4+p6ZHRVNVMU6coiOXohMxajjn0e1+4t8zTFYxei4jKu1adXKn1RK37I9FU2Yrr05zrGunXrOs+yPW+WxY8Hl1n1/8ASz4VngxqY9M+lLR7gMgAAAAAAAAAAAAAAAAAAAA8cqjW15ns/kxyBB3qeXpfPw8vRHvePSfTeJYu103MnHoqpnSaa79umqJjwaTKEv7b9GU6xObjeDqvUz7GlT0Rz9PvfqI9/sVb+33Rev8Ae7P3tfA9bW3HRtU8sq196YBbcG1rdiPL+CdQGy3SePlU112L1u7wcMVdjrpqmnXXTWI6uqfxT6VABAAAAAAAAAAAAAAAAAAAAAABmnbm3w7W50f/AGvT66pn3qRm+F0PeZb4dt82PHVRPrtUT73P8ynnLQ+O0kcLqR1hJ4cdqDuG4a3p0bmVeOuzHqpqn+TqbnG4y3psxfq8d+qPVat/1dHSgAgAAAAAAAAAAAAAAAAAAAAAA4Dvat6bcX5+lTYn8qmPc5xn09tLqO+ajTbGJ+lYsVf7rlP8XMc+OctCLsdaWxY7RFY8JbHj4sGhNzFrh2Lifp3b1Xqimn+K9qfumt8OweN/7TkT+fXHuXBKACAAAAAAAAAAAAAAAAAAAAAADi2/C1ptDj1/SscP3Ltc/wA4coz+t2fftY/uNz7TRP5cx7JcZz4aETjz20+dMWPmQhsbukprH6oBpnd3a4NicKPHbir79U1e9Y0ZsvZ7Hs3h0fRsY8fl0pNkAAAAAAAAAAAAAAAAAAAAAAAAc335Wddnsev6N/T71qv/AIw4Tn/NaG3x2eLYqur/AC7lirzRNXB/JnrNntGoIfH+fPnTOPTrMR40Pj91nzrF0HZ7J0rj0R/juWqfvVxHvBq3Et8GLRT9Gmin1REPUGQAAAAAAAAAAAAAAAAAAAAAAABV95tjj2HzI6uGmiv7lymr3M2ZnF2PwNTbV4sXtmcu3M8MVWb8cWmunaTOujLGVVPB4GoIixr2afOt2xdnsm1WFRM6RN/H106+6Uqnb5Xp8687r7UXNuMKKp0iK5q5eOiiquI9dMA0wAyAAAAAAAAAAAAAAAAAAAAAAAAI3aWrTZzMnxWMmfyqmU8r5rVG1k/JbN+z5P7VTK2VPJYIynuq8bra9NuML6yY9duqPeo9PdFy3az8tcH62j2So1AAyAAAAAAAAAAAAAAAAAAAAAAAAIja/vUzfs+T+3UyrldTVO2PennfZ8j9uplXJ6lgjqe6Lhu5n5Z4P11r2qdT3Vb93c/LPA+vs/qUalAZAAAAAAAAAAAAAAAAAAAAAAAAERth3qZ32fJ/bqZUyupqza3vWzfs+T+1UylkzyWCOp7ot273vywPr7H64VGnui3bvO/LA+vsfqhRqYBkAAAAAAAAAAAAAAAAAAAAAAAARW1fevm/Z8r9qplDJ6msdp4+TWZ9nyv2qmTsnqWCPp7ot+7vvzwPr7P6lQp7ot27vvzwPr7P6lGpgGQAAAAAAAAAAAAAAAAAAAAAAAB8fTGPN3ojItxzm5avURHlqomI9rI+TyiYnlMdcdUxLYjlW8PdX8Ky68rB4KbletV7HqmKKa65666KuqJnwxPLyrKM/wBPdFy3aW5r23wIj/Opq9FETXP4Uy9qN2HS05HD8EuRP0pm3FH3tdHWt2m7enoy58JyKqbmVMTTRFPO3Ypnr0meuqY5a+LWF0dDAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH//Z" alt="">
+            
+          </div>
+        </div>
+        <!-- third column -->
+        <div class="col-md-3">
+          <div class="gallery-box">
+            <img src="https://m.media-amazon.com/images/I/71NS711ybHL._SL1500_.jpg" alt="">
+            
+          </div>
+        </div>
+        <!-- fourth column -->
+        <div class="col-md-3">
+          <div class="gallery-box">
+            <img src="https://m.media-amazon.com/images/I/71Jd2SqrjnL._SY355_.jpg" alt="">
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- first column -->
+        <div class="col-md-3">
+          <div class="gallery-box">
+            <img src="https://static.beautytocare.com/media/catalog/product/cache/global/image/1300x1300/85e4522595efc69f496374d01ef2bf13/m/a/maybelline-superstay-matte-ink-liquid-lipstick-65-seductress.jpg" alt="">
+            <h4></h4>
+          </div>
+        </div>
+          <!-- second column -->
+          <div class="col-md-3">
+            <div class="gallery-box">
+              <img src="https://m.media-amazon.com/images/I/41wYwt1OWFL._SX425_.jpg" alt="">
+              
+            </div>
+          </div>
+          <!-- third column -->
+          <div class="col-md-3">
+            <div class="gallery-box">
+              <img src="https://www.bigbasket.com/media/uploads/p/l/40241275-2_1-miss-rose-24-color-glitter-eyeshadow-palette-highly-pigmented.jpg" alt="">
+              
+            </div>
+          </div>
+          <!-- fourth column -->
+          <div class="col-md-3">
+            <div class="gallery-box">
+              <img src="https://www.bigbasket.com/media/uploads/p/xxl/40227886_1-lakme-compact-face-it-matte-finish-powder-for-instant-glow.jpg" alt="">
+            </div>
+          </div>
+      </div>
+  </div>
+</section>

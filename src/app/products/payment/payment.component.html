@@ -1,0 +1,73 @@
+<p>payment works!</p>
+<!-- Header-->
+<!-- <header class="bg-dark py-4">
+    <div class="container px-4 px-lg-4 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Your Health is Your Beauty</h1>
+            <p class="lead fw-normal text-white-50 mb-0"></p>
+        </div>
+    </div>
+</header> -->
+<section class="vh-100" >
+    <div class="container  h-100">
+      <div class="row d-flex align-items-center justify-content-center" style="height:100%;">
+        <div class="col-md-8 col-lg-7 col-xl-6">
+          <img src="https://img.freepik.com/free-vector/seasonal-sale-discounts-presents-purchase-visiting-boutiques-luxury-shopping-price-reduction-promotional-coupons-special-holiday-offers-vector-isolated-concept-metaphor-illustration_335657-2766.jpg?w=360"
+            class="img-fluid"  alt="Phone image">
+        </div>
+        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+          <form [formGroup]="paymentform">
+            
+            <div class="form-outline mb-4">
+              <input type="text" formControlName="name" placeholder="Name" id="name" class="form-control form-control-lg" />
+              <div *ngIf="this.paymentform.get('name')?.errors && this.paymentform.get('name')?.touched" style="color:red;">
+                Invalid name
+            </div>
+            </div>
+            
+           
+            <div class="form-outline mb-4">
+              <input type="text" formControlName="add" placeholder="Address" id="add" class="form-control form-control-lg" /> 
+              <div *ngIf="this.paymentform.get('add')?.errors && this.paymentform.get('add')?.touched" style="color:red;">
+                Invalid Address
+              </div>
+            </div>
+            
+            <div class="form-outline mb-4">
+                <input type="number" formControlName="pin" placeholder="Pincode" id="pin" class="form-control form-control-lg" /> 
+                <div *ngIf="this.paymentform.get('pin')?.errors && this.paymentform.get('pin')?.touched" style="color:red;">
+                  Invalid Pincode
+                </div>
+              </div>
+              
+
+              <div class="form-outline mb-4">
+                <input type="text" formControlName="state" placeholder="State" id="state" class="form-control form-control-lg" /> 
+                <div *ngIf="this.paymentform.get('state')?.errors && this.paymentform.get('state')?.touched" style="color:red;">
+                  Incorrect
+                </div>
+              </div>
+              
+
+              <div class="form-outline mb-4">
+                <input type="text" formControlName="coun" placeholder="Country" id="country" class="form-control form-control-lg" /> 
+                <div *ngIf="this.paymentform.get('coun')?.errors && this.paymentform.get('coun')?.touched" style="color:red;">
+                  Incorrect
+                </div>
+              </div>
+             
+
+              <div class="form-outline mb-4">
+                <input type="number" formControlName="contact" placeholder="Contact No" id="form1Example23" class="form-control form-control-lg" /> 
+                <div *ngIf="this.paymentform.get('contact')?.errors && this.paymentform.get('contact')?.touched" style="color:red;">
+                  Invalid
+                </div>
+              </div>
+              
+            <!-- Submit button -->
+            <button (click)="Order()" type="button" class="btn btn-warning btn-lg btn-block">Place Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

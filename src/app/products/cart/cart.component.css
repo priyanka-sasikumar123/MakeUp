@@ -1,0 +1,11 @@
+.cartdiv{
+    font-family:'Titillium Web', sans-serif ;
+}
+header{
+    background-image: url("https://img.freepik.com/premium-photo/top-view-decoration-with-beauty-products-pink-background_23-2148301810.jpg?w=2000");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+   
+    margin-top: 40px;
+}

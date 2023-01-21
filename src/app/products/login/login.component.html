@@ -1,0 +1,53 @@
+
+ <!-- Header-->
+ <!-- <header class="bg-dark py-4">
+    <div class="container px-4 px-lg-4 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Your Health is Your Beauty</h1>
+            <p class="lead fw-normal text-white-50 mb-0"></p>
+        </div>
+    </div>
+</header> -->
+<section class="vh-100" >
+    <div class="container  h-100" >
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body text-center" style="color: palevioletred;" >
+  
+              <h3 class="mb-5">Sign in</h3>
+             <form [formGroup]="loginform">
+              <div class="form-outline mb-4">
+                <input type="email" formControlName="email" id="email" placeholder="Email" class="form-control form-control-lg" /> 
+              </div>
+              <div *ngIf="this.loginform.get('email')?.errors && this.loginform.get('email')?.touched" style="color:red;">
+                Invalid 
+            </div>
+              <div class="form-outline mb-4">
+                <input type="password" formControlName="pswd" id="pswd" placeholder="Password" class="form-control form-control-lg" />  
+              </div>
+              <div *ngIf="this.loginform.get('pswd')?.errors && this.loginform.get('pswd')?.touched" style="color:red;">
+                Invalid 
+            </div>
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-start mb-4">
+                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                <label class="form-check-label" for="form1Example3"> Remember password </label>
+              </div>
+  
+              <button (click)="login()" class="btn btn-warning btn-lg btn-block" type="button">Login</button>
+              <a class="btn" href="">Register</a>
+            </form>  
+              <!-- <hr class="my-4"> -->
+  
+              <!-- <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
+                type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
+              <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
+                type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button> -->
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

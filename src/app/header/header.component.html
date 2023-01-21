@@ -1,0 +1,50 @@
+ <!-- Navigation-->
+ <nav class="navbar navbar-expand-lg ">
+    <div class="container px-4 px-lg-4">
+        <a class="navbar-brand text-white" href="#!">BEAUTY</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+               
+                <li class="nav-item"><input (keyup)="search($event)"  type="text"  placeholder="Search Your Product" class="form-control mt-1 me-5"></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link " routerLink="products/all-products" style="color:white;" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                    
+                    <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="products/all-products">All Products</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">By Category</a>
+                           <ul class="dropdown-menu1">
+                            <li><a class="dropdown-item" href="#!">Blush</a></li>
+                            <li><a class="dropdown-item" href="#!">Foundation</a></li>
+                            <li><a class="dropdown-item" href="#!">Mascara</a></li>
+                            <li><a class="dropdown-item" href="#!">Bronzer</a></li>
+                           </ul>
+                        </li>
+                        
+                    </ul> -->
+                </li>
+                <li class="nav-item"><a class="nav-link active" style="color:white;" aria-current="page" href="#!"></a></li>
+            </ul>
+
+             <a routerLink="products/wishlist"><i class="fa-solid fa-heart m-3" style="width: 20px; color: white;"></i></a>
+            <form class="d-flex">
+                <a routerLink="products/cart" class="btn " type="submit" style="color:white; font-size: 19px; border-color: blanchedalmond;">
+                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                    Cart
+                    <!-- <span class="badge bg-white text-dark ms-1 rounded-pill">0</span> -->
+                </a>
+            </form>
+           
+        </div>
+    </div>
+</nav>
+ <!-- Header-->
+ <!-- <header class="bg-dark py-4">
+    <div class="container px-4 px-lg-4 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Your Health is Your Beauty</h1>
+            <p class="lead fw-normal text-white-50 mb-0"></p>
+        </div>
+    </div>
+</header> -->

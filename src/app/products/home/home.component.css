@@ -1,0 +1,35 @@
+.maindiv{
+    background-image: url('https://files.myglamm.com/site-images/768x432/list-of-makeup-items.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+.gallery {
+    padding: 100px 0px;
+    background:#efefef ;
+}
+.gallery-box img{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.gallery-box img:hover{
+    transform: scale(1.1);
+}
+.gallery-box h4{
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    position: absolute;
+    left:50%;
+    top:50%;
+    color: white;
+    text-shadow: -2px 2px 2px #000;
+    font-size: 20px;
+    transform:translate(-50%,-50%)
+}
+.gallery-box{
+    position: relative;
+    margin-bottom: 30px;
+}

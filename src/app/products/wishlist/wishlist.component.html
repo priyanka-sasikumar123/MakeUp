@@ -1,0 +1,59 @@
+<!-- Header-->
+<header class="bg-dark py-4">
+  <div class="container px-4 px-lg-4 my-5">
+      <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder">Your Health is Your Beauty</h1>
+          <p class="lead fw-normal text-white-50 mb-0"></p>
+      </div>
+  </div>
+</header>
+<!-- empty cart -->
+<div class="h-100" style="background-color: #eee;" *ngIf="emsg">
+    <div class="container  h-100 py-5">
+        <div class="row d-flex justify-content-center align-items-center h-100 text-center">
+            <div class="col-10">
+                <img src="https://static.vecteezy.com/system/resources/previews/001/187/442/non_2x/heart-png.png" width="50%" alt="">
+                <h4 class="mt-4" >Your Wishlist is empty</h4>
+                <button routerLink="/all-products" class="btn btn-warning btn-block btn-lg">Add Your Favourites</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<div class="h-100" style="background-color: #eee;" *ngIf="wishlist.length!=0">
+    <div class="container h-100 py-5">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-10">
+  
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="fw-normal mb-0 text-black">Wish List</h3>
+            <!-- <div>
+              <p class="mb-0"><span class="text-muted">Sort by:</span> <a href="#!" class="text-body">price <i
+                    class="fas fa-angle-down mt-1"></i></a></p>
+            </div> -->
+          </div>
+  
+          <div class="card rounded-3 mb-4" *ngFor="let product of wishlist">
+            <div class="card-body p-4">
+              <div class="row d-flex justify-content-between align-items-center">
+                <div id="imagediv" class="col-md-2 col-lg-2 col-xl-2">
+                  <img [src]="product.image_link" class="img-fluid rounded-3">
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-3">
+                  <p class="lead fw-normal mb-2">{{product.name}}</p>
+                  <p><span class="text-muted">Product Type:{{product.product_type}} </span>M <span class="text-muted">Color: </span>Grey</p>
+                </div>
+                <div class="col-md-2 ">
+                  <h5 class="mb-0">Rs.{{product.price}}</h5>
+                </div>
+                <div class="col-md-2 col-lg-1 col-xl-2 d-flex">
+                    <button (click)="addcart(product)"  class="btn text-success" ><i class="fas fa-cart-plus fa-lg"></i></button>
+                   
+                </div>
+                <div class="col-md-2">
+                    <button (click)="deletewish(product)" class="btn text-danger"><i class="fas fa-trash fa-lg"></i></button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>

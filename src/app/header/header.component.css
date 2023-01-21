@@ -1,0 +1,11 @@
+.navbar{
+    font-size: 20px;
+    background-color:rgb(191, 67, 117);
+     /* rgb(175,125,120); */
+    font-family: 'Titillium Web', sans-serif;   
+}
+.navbar-brand{
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+}
+

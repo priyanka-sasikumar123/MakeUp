@@ -1,0 +1,12 @@
+.wish:hover{
+    transform: scale(1.25);
+    transition: 0.5s;
+}
+header{
+    background-image: url("https://img.freepik.com/premium-photo/top-view-decoration-with-beauty-products-pink-background_23-2148301810.jpg?w=2000");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+   
+    margin-top: 40px;
+}
